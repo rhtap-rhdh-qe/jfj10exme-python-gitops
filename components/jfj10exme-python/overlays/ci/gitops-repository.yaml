@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: jfj10exme-python-gitops-repository
+spec:
+  url: https://github.com/rhtap-rhdh-qe/jfj10exme-python-gitops

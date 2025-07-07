@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: jfj10exme-python-gitops
+  description: This is GitOps manifest for jfj10exme-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=jfj10exme-python
+    backstage.io/kubernetes-id: jfj10exme-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: jfj10exme-python
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:jfj10exme-python
